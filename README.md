@@ -22,29 +22,59 @@ This script is Bash-based designed to download and install applications on both 
 - `sudo` privileges for installations.
 
 ### Windows
-- Git Bash or Windows Subsystem for Linux (WSL).
+- Windows Subsystem for Linux (WSL), 
 - `curl` or `wget` for downloading files.
 
 ---
 
 ## How to Use the Script
 
-1. **Download the Script**
+### Windows
+
+1. **make sure windows is up to date!**
+
+2. open **command prompt** install **WSL** if not already preinstalled
+   ```bash
+   wsl --install -d Debian
+
+3.  reboot windows and run WSL
+
+4. **Download the Script**
    Save the script file to your local machine as `install_apps.sh`.
 
-2. **Make the Script Executable**
+5. **Make the Script Executable**
    Open a terminal in the directory containing the script and run:
    ```bash
    chmod +x install_apps.sh
    ```
 
-3. **Run the Script**
+6. **Run the Script**
+   Execute the script with:
+   ```bash
+   ./install_apps.sh
+   ```
+   
+### Linux
+1. **update your linux machine**
+   ```bash
+   sudo apt update && sudo apt upgrade -y
+
+2. **Download the Script**
+   Save the script file to your local machine as `install_apps.sh`.
+
+3. **Make the Script Executable**
+   Open a terminal in the directory containing the script and run:
+   ```bash
+   chmod +x install_apps.sh
+   ```
+
+4. **Run the Script**
    Execute the script with:
    ```bash
    ./install_apps.sh
    ```
 
-4. **Follow the Prompts**
+ **Follow the Prompts**
    - The script will detect your operating system.
    - You will be prompted to choose a browser (either Firefox or Chrome).
    - The script will download and install the selected browser along with Spotify, Steam, and Discord.
