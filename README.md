@@ -1,4 +1,4 @@
-# README: Cross-Platform Application Installer Script
+# README: Cross-Platform Application Installer
 
 ## Overview
 This script is Bash-based designed to download and install applications on both Windows and Linux platforms. It automatically detects your operating system asks you to select a browser and downloads and installs the applications
