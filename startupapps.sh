@@ -1,5 +1,8 @@
 #!/bin/bash
 
+echo "welcome to Hydrose's program installer"
+echo "my paypal is recca275@gmail.com for tips and donations"
+
 # URLs for downloading the applications
 declare -A urls
 urls["firefox_windows"]="https://download.mozilla.org/?product=firefox-latest&os=win64&lang=en-US"
