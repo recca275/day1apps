@@ -1,8 +1,21 @@
 #!/bin/bash
 
-echo "welcome to Hydrose's program installer"
+GREEN='\033[0;32m'
+NC='\033[0m' #No Color
 
-# URLs for downloading the applications
+function donate() {
+    printf "${GREEN}****************************************${NC}\n"
+    printf "${GREEN}*                                      *${NC}\n"
+    printf "${GREEN}*   Enjoy & thank you for considering  *${NC}\n"
+    printf "${GREEN}*   a donation! You can find and       *${NC}\n"
+    printf "${GREEN}*         support me at:               *${NC}\n"
+    printf "${GREEN}*   https://www.github.com/recca275    *${NC}\n"
+    printf "${GREEN}*   https://www.paypal.me/recca275     *${NC}\n"
+    printf "${GREEN}*                                      *${NC}\n"
+    printf "${GREEN}****************************************${NC}\n"
+}
+
+#URLs for downloading the applications
 declare -A urls
 urls["firefox_windows"]="https://download.mozilla.org/?product=firefox-latest&os=win64&lang=en-US"
 urls["firefox_linux"]="https://download.mozilla.org/?product=firefox-latest&os=linux64&lang=en-US"
@@ -15,7 +28,7 @@ urls["steam_linux"]="https://cdn.akamai.steamstatic.com/client/installer/steam.d
 urls["discord_windows"]="https://discord.com/api/download?platform=win"
 urls["discord_linux"]="https://discord.com/api/download?platform=linux&format=deb"
 
-# Detect operating system
+#Detect operating system
 OS_TYPE=""
 if [[ "$OSTYPE" == "linux-gnu"* ]]; then
     OS_TYPE="linux"
@@ -26,7 +39,7 @@ else
     exit 1
 fi
 
-# Prompt user for browser choice
+#Prompt user for browser choice
 read -p "Choose a browser to download (firefox/chrome): " browser_choice
 browser_choice=$(echo "$browser_choice" | tr '[:upper:]' '[:lower:]')
 
@@ -35,11 +48,11 @@ if [[ "$browser_choice" != "firefox" && "$browser_choice" != "chrome" ]]; then
     exit 1
 fi
 
-# Create a downloads directory
+#Create a downloads directory
 DOWNLOAD_DIR="./downloads"
 mkdir -p "$DOWNLOAD_DIR"
 
-# Download the selected browser
+#Download the selected browser
 key="${browser_choice}_${OS_TYPE}"
 url="${urls[$key]}"
 
@@ -61,7 +74,7 @@ fi
 
 echo "Downloaded to $output_file"
 
-# Install or run the file
+#Install or run the file
 if [[ "$OS_TYPE" == "windows" ]]; then
     echo "Running installer..."
     cmd.exe /c "$output_file"
@@ -75,5 +88,6 @@ else
     fi
 fi
 
+#end of program
 echo "Process complete."
-echo "my paypal is recca275@gmail.com for tips and donations"
+donate
