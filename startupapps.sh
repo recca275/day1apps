@@ -1,7 +1,6 @@
 #!/bin/bash
 
 echo "welcome to Hydrose's program installer"
-echo "my paypal is recca275@gmail.com for tips and donations"
 
 # URLs for downloading the applications
 declare -A urls
@@ -77,3 +76,4 @@ else
 fi
 
 echo "Process complete."
+echo "my paypal is recca275@gmail.com for tips and donations"
