@@ -1,109 +1,79 @@
-# README: Cross-Platform Application Installer
+# day1apps by recca275
 
-## Overview
-This script is Bash-based designed to download and install applications on both Windows and Linux platforms. It automatically detects your operating system asks you to select a browser and downloads and installs the applications
+**For gamers too lazy to download their apps manually.**
+
+This script automates the process of downloading and installing common applications for gamers. It detects your operating system and downloads the appropriate version of the selected applications.
+
+## Supported Platforms
+- Windows
+- Linux
+
+## Requirments
+
+### Windows
+- PowerShell 5.0 or later (pre-installed on most modern Windows versions)
+
+### Linux
+- A terminal with `bash` or `zsh`
+- `dpkg` (for `.deb` package installations)
+- `wget` or `curl` for downloading files
+- `tar` for extracting `.tar.xz` files (Lutris)
+
+---
+
+## How to Use
+
+### Windows
+1. Save the script to downloads folder as `day1apps.ps1`.
+2. Open POwerShell as an Administrator
+3. Navigate to the folder containing the script:
+   ```powershell
+   cd users\USERNAMEHERE\downloads 
+   ```
+4. Run the script:
+   ```powershell
+   .\day1apps.ps1
+   ```
+5. Follow the on-screen prompts to select and install applications.
+
+### Linux
+1. Save the script as `day1apps.sh`.
+2. Open a terminal.
+3. Navigate to the folder containing the script:
+   ```bash
+   cd /path/to/script
+   ```
+4. Make the script executable:
+   ```bash
+   chmod +x day1apps.sh
+   ```
+5. Run the script:
+   ```bash
+   ./day1apps.sh
+   ```
+6. Follow the on-screen prompts to select and install applications.
+
+---
+
+## Applications Available for Download
+- **Browsers**: Firefox, Google Chrome
+- **Gaming Clients**: Steam, Battle.net(Windows only), Epic Games Launcher(Windows only), Lutris (Linux only)
+- **Other**: Spotify, Discord
 
 ---
 
 ## Features
-- **Automatic OS Detection**: Supports Windows and Linux.
-- **Custom Browser Selection**: Choose between Firefox and Google Chrome.
-- **Predefined Apps**: Includes Spotify, Steam, and Discord in addition to the selected browser.
-- **Automated Installation**: Handles both `.exe` (Windows) and `.deb` (Linux) files.
-- **Cross-Platform Compatibility**: Runs in Bash, compatible with Linux natively and with Git Bash or WSL on Windows.
+- Detects your operating system automatically (Windows/Linux).
+- Downloads and installs applications or sets up `.deb`/`.tar` packages for Linux.
+- Creates shortcuts on the desktop for installed applications.
+- Skips already installed applications.
 
 ---
 
-## Requirements
-### Linux
-- Bash shell (pre-installed on most distributions).
-- `curl` or `wget` for downloading files.
-- `dpkg` for installing `.deb` packages.
-- `sudo` privileges for installations.
+## Donation
+If you enjoy this tool and wish to support further development, consider donating!
 
-### Windows
-- Windows Subsystem for Linux (WSL), 
-- `curl` or `wget` for downloading files.
+- [GitHub](https://www.github.com/recca275)
+- [PayPal](https://www.paypal.me/recca275)
 
----
-
-## How to Use the Script
-
-### Windows
-
-1. **make sure windows is up to date!**
-
-2. open **command prompt** install **WSL** if not already preinstalled
-   ```bash
-   wsl --install -d Debian
-
-3.  reboot windows and run WSL
-
-4. **Download the Script**
-   Save the script file to your local machine as `install_apps.sh`.
-
-5. **Make the Script Executable**
-   Open a terminal in the directory containing the script and run:
-   ```bash
-   chmod +x install_apps.sh
-   ```
-
-6. **Run the Script**
-   Execute the script with:
-   ```bash
-   ./install_apps.sh
-   ```
-   
-### Linux
-1. **update your linux machine**
-   ```bash
-   sudo apt update && sudo apt upgrade -y
-
-2. **Download the Script**
-   Save the script file to your local machine as `install_apps.sh`.
-
-3. **Make the Script Executable**
-   Open a terminal in the directory containing the script and run:
-   ```bash
-   chmod +x install_apps.sh
-   ```
-
-4. **Run the Script**
-   Execute the script with:
-   ```bash
-   ./install_apps.sh
-   ```
-
- **Follow the Prompts**
-   - The script will detect your operating system.
-   - You will be prompted to choose a browser (either Firefox or Chrome).
-   - The script will download and install the selected browser along with Spotify, Steam, and Discord.
-
----
-
-## What the Script Does
-1. **OS Detection**: Identifies if you're running on Windows or Linux.
-2. **Browser Choice**: Prompts for a choice between Firefox and Chrome.
-3. **Download Directory**: Creates a `downloads` directory in the script's location to store the downloaded files.
-4. **File Download**: Fetches the appropriate installers for your operating system.
-5. **Installation**:
-   - **Windows**: Runs `.exe` files directly.
-   - **Linux**: Installs `.deb` files using `dpkg` and resolves dependencies.
-
----
-
-## Notes
-- The script relies on either `curl` or `wget` for downloading files. Ensure at least one is installed.
-- For Linux installations, administrative (`sudo`) privileges are required to install `.deb` packages.
-- On Windows, you may need to run Git Bash or WSL with administrative permissions if file execution fails.
-
----
-
-## Troubleshooting
-- **Download Issues**: Ensure your internet connection is active and `curl` or `wget` is installed.
-- **Permission Denied**: Check file permissions and run the script as an administrator or with `sudo`.
-- **Unsupported OS**: If the script doesn't detect your OS, ensure you're running it in Bash on a supported platform.
-
----
-
-
+Thank you for your support!**
