@@ -24,17 +24,20 @@ This script automates the process of downloading and installing common applicati
 ## How to Use
 
 ### Windows
-1. Save the script to downloads folder as `day1apps.ps1`.
-2. Open POwerShell as an Administrator
-3. Navigate to the folder containing the script:
+
+![Screenshot from 2025-01-21 18-28-57](https://github.com/user-attachments/assets/af54ffbd-79da-40e8-ace4-a8118ae3c0dd)
+1. download .zip file.
+2. extract and copy paste `day1apps.ps1` in your downloads.
+3. Open POwerShell as an Administrator
+4. Navigate to the folder containing the script:
    ```powershell
    cd users\USERNAMEHERE\downloads 
    ```
-4. Run the script:
+5. Run the script:
    ```powershell
    .\day1apps.ps1
    ```
-5. Follow the on-screen prompts to select and install applications.
+6. Follow the on-screen prompts to select and install applications.
 
 ### Linux
 1. Save the script as `day1apps.sh`.
